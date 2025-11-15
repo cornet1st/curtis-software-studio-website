@@ -1,0 +1,11 @@
+# robots.txt for Curtis Software Studio Website
+
+User-agent: *
+Allow: /
+
+# Disallow access to the WEB-INF directory and the servlet endpoint
+Disallow: /WEB-INF/
+Disallow: /ContactServlet
+
+# Sitemap location
+Sitemap: /sitemap.xml
