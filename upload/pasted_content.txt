@@ -1,0 +1,389 @@
+🔧 Instruction for Manus (copy-paste this)
+
+Project Name: Curtis Software Studio Website (JSP + Bootstrap)
+
+You are the lead developer.
+Please create a complete, production-ready JSP-based website for Curtis Software Studio, a one-developer web development studio based in Coquitlam, BC.
+
+1. Tech Stack & Architecture
+
+Use JSP for all pages (e.g., index.jsp, about.jsp, etc.), suitable for deployment on Tomcat.
+
+Use HTML5 + CSS3 + JavaScript.
+
+Use Bootstrap 5 as the main CSS framework with a custom, modern design (no Tailwind).
+
+Create shared layout components:
+
+header.jsp (logo, navigation, language toggle)
+
+footer.jsp (footer content, copyright, links)
+
+All pages must be fully responsive (desktop, tablet, mobile) and visually polished.
+
+2. Design Requirements
+
+The site should look like a modern, professional studio website:
+
+Clean layout, good use of whitespace and hierarchy.
+
+Use a simple, consistent color palette (e.g. white + dark gray + one accent color).
+
+Use Bootstrap’s grid system and components, but customize with additional CSS to avoid “default Bootstrap” look.
+
+Use a consistent typography system (e.g. bold headings, clear body text).
+
+Sticky top navigation on desktop.
+
+Smooth scroll or basic transitions are a plus.
+
+3. Bilingual Language Toggle (English / Traditional Chinese)
+
+The site must support English and Traditional Chinese, but only one language is visible at a time.
+
+Implementation guidelines:
+
+Add a language toggle (e.g. buttons or dropdown) in the header:
+
+EN and 繁中
+
+Implement the language switch on the frontend using JavaScript:
+
+Use CSS classes like .lang-en and .lang-zh on all text elements.
+
+When language is set to English, show .lang-en and hide .lang-zh.
+
+When language is set to Chinese, show .lang-zh and hide .lang-en.
+
+Store the selected language in localStorage so that the preference persists across pages.
+
+Default language can be English (EN).
+
+Every heading, paragraph, button label, and navigation item must have both English and Traditional Chinese versions in the HTML, but only the selected language is visible.
+
+Example pattern (for you to generalize):
+
+<h1 class="lang-en">Custom websites & web applications for real businesses.</h1>
+<h1 class="lang-zh">為真實商家打造的客製化網站與網頁系統。</h1>
+
+
+JavaScript then controls visibility.
+
+4. Logo
+
+Create a simple, text-based logo in the header:
+
+Brand name: Curtis Software Studio
+
+Design:
+
+Use typography and spacing to make it look like a wordmark.
+
+You may emphasize “Curtis” or use a subtle styling like Curtis • Software • Studio.
+
+Implement logo in header.jsp using HTML + CSS (no image file required, but you may add a small SVG or icon if helpful).
+
+5. Pages to Implement
+
+Create the following JSP pages, all using the shared header and footer, and all fully bilingual (via toggle).
+
+5.1 index.jsp (Home)
+
+Sections:
+
+Hero Section
+
+Main heading (EN + zh; switchable) expressing:
+“Curtis Software Studio — Custom websites & web applications for real businesses.”
+
+Short intro about the studio and Curtis Chen (EN + zh).
+
+Two primary buttons:
+
+Get a Free Consultation
+
+View Portfolio
+
+Services Overview
+High-level cards (EN + zh) for:
+
+Business Websites & Landing Pages
+
+Custom Web Applications
+
+System Upgrade & Migration
+
+Maintenance & Security
+
+Why Work With Me
+At least 4 bullet points (EN + zh), emphasizing:
+
+Full-stack, end-to-end development
+
+Experience with healthcare and education systems
+
+Bilingual communication
+
+Practical, maintainable solutions
+
+Featured Projects
+At least 3 project preview cards with placeholder content:
+
+Project name
+
+Short description
+
+“View details” or similar text
+
+Process (How It Works)
+6 steps (EN + zh):
+
+Free Consultation
+
+Proposal & Rough Quote
+
+Design / Prototype
+
+Development & Testing
+
+Launch
+
+Ongoing Support
+
+Final Call to Action
+Short paragraph (EN + zh) inviting users to contact, plus a Get a Free Consultation button.
+
+5.2 about.jsp (About)
+
+Content:
+
+Intro to Curtis Chen (background, experience, location).
+
+Description of Curtis Software Studio as a one-person studio.
+
+Skills list (Java, JSP, Spring, JavaScript, Bootstrap, Linux, PostgreSQL, MySQL, MSSQL, Docker, etc.).
+
+Emphasis on working with small businesses, studios, clinics, and educators.
+
+All content provided in both languages using the language toggle pattern.
+
+5.3 services.jsp (Services)
+
+Services to detail:
+
+Business Websites & Landing Pages
+
+Custom Web Applications
+
+System Upgrade & Migration
+
+Maintenance & Security
+
+For each service, include (EN + zh):
+
+What it is.
+
+Who it’s for.
+
+What’s included (bullet list).
+
+A sample starting price range (e.g., “Projects typically start from CAD $X,XXX”).
+
+Layout:
+
+Use a card or section layout with clear visual separation for each service.
+
+5.4 portfolio.jsp (Portfolio)
+
+At least 3 project case study templates (placeholder content).
+
+For each project, include:
+
+Project Title
+
+Client Type
+
+Problem
+
+Solution
+
+Tech Stack
+
+Outcome
+
+All headings and key labels in EN + zh, content can be meaningful placeholders.
+
+Use a clean, modern layout (cards or sections) that looks like a real case study page.
+
+5.5 faq.jsp (FAQ)
+
+Create a FAQ page with at least 8–10 common questions and answers, in both languages via toggle.
+
+Example topics:
+
+How long does a typical project take?
+
+What is the usual price range?
+
+Do you work with clients outside Vancouver?
+
+What technologies do you use?
+
+Do you provide hosting and help with domains?
+
+How does payment work (deposit, milestones)?
+
+What do I need to prepare before starting a project?
+
+Can you update or fix my existing website?
+
+Use an accordion component (Bootstrap) to display Q&A nicely.
+
+5.6 contact.jsp (Contact)
+
+Contact form fields:
+
+Name
+
+Email
+
+Business / Organization Name (optional)
+
+Location (City, Province)
+
+Project Type (checkboxes: New Website, Redesign, Web Application, System Upgrade, Maintenance, Other)
+
+Budget Range (select)
+
+Message / Project Description
+
+Client-side validation for required fields.
+
+The form does not need to submit to a real backend; you can:
+
+Either simulate submission and redirect to thankyou.jsp, or
+
+Prepare a form action placeholder and still redirect to thankyou.jsp after a fake submit.
+
+All labels and help texts in both languages (controlled by the language toggle).
+
+5.7 thankyou.jsp
+
+Simple page displayed after form submission.
+
+Thank-you message and short text (EN + zh) confirming that the inquiry has been received.
+
+5.8 quote.jsp (Printable Quote Template)
+
+A print-friendly quote/proposal template that can be exported to PDF via the browser.
+
+Sections:
+
+Header: Curtis Software Studio logo + contact information
+
+“Project Quote – Curtis Software Studio” title (EN + zh)
+
+Client Information (name, company, contact)
+
+Project Overview (free text area or section)
+
+Scope of Work (bullet list)
+
+Timeline & Milestones
+
+Pricing & Payment Terms
+
+Notes / Assumptions
+
+Signature fields (Client / Curtis Software Studio)
+
+Implement this in HTML + CSS designed for printing (A4 or Letter), using Bootstrap plus custom CSS (e.g. a simple border, headings, spacing). All section titles in EN + zh.
+
+6. SEO & Sitemap
+6.1 Meta Tags
+
+For each main page (index.jsp, about.jsp, services.jsp, portfolio.jsp, faq.jsp, contact.jsp, quote.jsp):
+
+Add a meaningful <title> tag.
+
+Add a <meta name="description" content="..."> summarizing the page in 1–2 sentences (English is fine, but you can include key terms like “Curtis Software Studio”, “Coquitlam, BC”, “web development”, “網站開發”, etc.).
+
+Add basic Open Graph tags on index.jsp at least:
+
+og:title
+
+og:description
+
+og:type
+
+(Optionally og:url and og:image as placeholders)
+
+6.2 sitemap.xml
+
+Create a standard sitemap.xml file at the project root including URLs for:
+
+/index.jsp
+
+/about.jsp
+
+/services.jsp
+
+/portfolio.jsp
+
+/faq.jsp
+
+/contact.jsp
+
+/quote.jsp
+
+/thankyou.jsp
+
+Use the correct XML sitemap structure.
+
+7. Project Structure
+
+Use a structure similar to:
+
+/project-root
+   /WEB-INF
+      web.xml        # basic config if needed
+   /includes
+      header.jsp
+      footer.jsp
+   /css
+      styles.css     # custom styles
+   /js
+      main.js        # language toggle, any interactivity
+   /img
+      # placeholder images if needed
+   index.jsp
+   about.jsp
+   services.jsp
+   portfolio.jsp
+   faq.jsp
+   contact.jsp
+   thankyou.jsp
+   quote.jsp
+   sitemap.xml
+
+
+header.jsp and footer.jsp should be included in all pages via JSP includes.
+
+8. Implementation Order
+
+Please proceed in this order:
+
+Generate the project structure and create header.jsp, footer.jsp, and base styles.css and main.js.
+
+Implement the language toggle system (classes + JS + localStorage).
+
+Fully implement index.jsp (Home) with all sections and bilingual content.
+
+Implement about.jsp, services.jsp, portfolio.jsp, faq.jsp, contact.jsp, thankyou.jsp, and quote.jsp.
+
+Add SEO meta tags to each page and generate sitemap.xml.
+
+Ensure the entire site is responsive and visually polished.
+
+Start with:
+“Step 1 → Create project structure, header/footer, language toggle, and Home page (index.jsp).”
